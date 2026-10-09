@@ -1,0 +1,37 @@
+Ce fichier décrit le format Excel attendu pour l'importation des notes.
+
+=== FORMAT DU FICHIER EXCEL (notes_import_template.xlsx) ===
+
+Ligne 1 : EN-TÊTE (ignorée lors de l'import)
+
+Colonnes :
+A  = Matricule (ex: SN12345)
+B  = Prénom
+C  = Nom
+D  = Langue et Communication - Ressources (sur 20)
+E  = Langue et Communication - Compétences (sur 20)
+F  = Découverte du Monde - Ressources (sur 30)
+G  = Découverte du Monde - Compétences (sur 30)
+H  = Développement Durable - Ressources (sur 20)
+I  = Développement Durable - Compétences (sur 20)
+J  = Mathématique - Ressources (sur 40)
+K  = Mathématique - Compétences (sur 40)
+L  = Education Artistique - Ressources (sur 5)
+M  = Education Artistique - Compétences (sur 5)
+N  = Chant/Récitation - Ressources (sur 5)
+O  = Chant/Récitation - Compétences (sur 5)
+
+=== FORMAT DU FICHIER EXCEL (eleves_import_template.xlsx) ===
+
+Ligne 1 : EN-TÊTE (ignorée)
+
+Colonnes :
+A = Prénom
+B = Nom
+C = Date de naissance (format: YYYY-MM-DD, ex: 2015-03-25)
+D = Lieu de naissance
+E = Sexe (M ou F)
+F = Nom du père
+G = Nom de la mère
+H = Téléphone parent
+I = Adresse

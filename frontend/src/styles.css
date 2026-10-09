@@ -1,0 +1,37 @@
+/* Global styles */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+}
+
+.cursor-pointer { cursor: pointer; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #1a6b3c; border-radius: 3px; }
+
+/* Table improvements */
+.table thead th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
+
+/* Badge improvements */
+.badge { font-weight: 500; }
+
+/* Alert improvements */
+.alert { border-radius: 8px; }
+
+/* Print styles */
+@media print {
+  nav, .no-print, .modal-header .btn-close, button { display: none !important; }
+  .modal { position: static !important; background: white !important; }
+  .modal-dialog { max-width: 100% !important; margin: 0 !important; }
+  .modal-content { border: none !important; box-shadow: none !important; }
+  body { background: white !important; }
+}

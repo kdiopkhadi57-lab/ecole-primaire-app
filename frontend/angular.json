@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ecole-primaire-frontend": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": { "style": "css", "standalone": true },
+        "@schematics/angular:directive": { "standalone": true },
+        "@schematics/angular:pipe": { "standalone": true }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/ecole-primaire-frontend",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.json",
+            "inlineStyleLanguage": "css",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {"type": "initial", "maximumWarning": "500kb", "maximumError": "1mb"},
+                {"type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb"}
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": { "buildTarget": "ecole-primaire-frontend:build:production" },
+            "development": { "buildTarget": "ecole-primaire-frontend:build:development" }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "1486095a-0516-449c-8ffc-c1f6d23e43d9"
+  }
+}
